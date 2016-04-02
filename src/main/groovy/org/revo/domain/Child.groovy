@@ -1,13 +1,11 @@
 package org.revo.domain
 
-import com.fasterxml.jackson.annotation.JsonBackReference
-import com.fasterxml.jackson.annotation.JsonManagedReference
 import com.fasterxml.jackson.annotation.JsonView
 import groovy.transform.Canonical
 import org.hibernate.validator.constraints.URL
+import org.revo.Util.RevoView
 import org.revo.domain.RevoEnum.Gender
 import org.revo.domain.RevoEnum.State
-import org.revo.Util.RevoView
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.Id
 import org.springframework.data.annotation.Transient
@@ -18,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 /**
  * Created by revo on 3/10/16.
  */
-@Canonical(excludes = ["suggestedChild","person"])
+@Canonical(excludes = ["suggestedChild", "person"])
 @Document
 class Child {
     @Id
