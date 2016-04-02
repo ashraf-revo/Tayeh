@@ -7,6 +7,6 @@ applications:
   buildpack: java_buildpack
   path: target/Tayeh-0.0.1.RELEASE.jar
   services:
-    - tayeh
+    - 
   env:
     SPRING_PROFILES_ACTIVE: prod
