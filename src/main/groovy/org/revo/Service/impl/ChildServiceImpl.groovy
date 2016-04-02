@@ -88,8 +88,8 @@ class ChildServiceImpl implements ChildService {
         }
 
         if (criteria.age1 && criteria.age2) {
-            list.add(Criteria.where("age").gte(criteria.age1 as Long))
-            list.add(Criteria.where("age").lte(criteria.age2 as L))
+            list.add(Criteria.where("age").gte(criteria.age1 as int))
+            list.add(Criteria.where("age").lte(criteria.age2 as int))
         }
         if (criteria.date1 && criteria.date2) {
             list.add(Criteria.where("createdDate").gte(criteria.date1))
@@ -97,12 +97,12 @@ class ChildServiceImpl implements ChildService {
         }
         Query query
 
-        if (list.size()>0)
-        query= new Query(c.andOperator(list.toArray() as Criteria[]))
-        else query=new Query()
+        if (list.size() > 0)
+            query = new Query(c.andOperator(list.toArray() as Criteria[]))
+        else query = new Query()
         query.with(new Sort(Sort.Direction.DESC, "createdDate"))
         query.limit(4)
-        query.skip(4*criteria.page)
+        query.skip(4 * criteria.page)
         println(query.toString())
         mongoOperations.find(query, Child.class)
     }
@@ -167,6 +167,11 @@ class ChildServiceImpl implements ChildService {
             }
         }
         updateSuggestedChild(c.id, uuids).suggestedChild
+    }
+
+    @Override
+    Set<SuggestedChild> suggested(String id) {
+        childRepository.findOne(id).suggestedChild
     }
 
     private static boolean Contains(Set<Child> data, Child one) {

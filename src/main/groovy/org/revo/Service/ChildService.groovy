@@ -28,4 +28,6 @@ interface ChildService {
     void uplode(Child child)
 
     Set<SuggestedChild> search(Child c)
+
+    Set<SuggestedChild> suggested(String id)
 }

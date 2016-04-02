@@ -2,11 +2,14 @@
     <div class="container">
         <div class="gallery-bottom">
             <div class="gallery-grids" ng-if="c">
-                <div class="col-md-3 gallery-left" style="margin-right: 15%">
-                    <a ui-sref="image({id:c.id})">
-                        <img ng-src="{{c.image}}" class="b-link-stripe b-animate-go  thickbox"></a>
+                <div class="col-md-3 services-left" style="margin-right: 15%">
+                    <div class="view fifth-effect">
+                        <img ng-src="{{c.image}}"/>
+                        <div class="mask"></div>
+                    </div>
                 </div>
                 <div class="col-md-6 gallery-right">
+                    <a ng-click="reload()" class="btn"><span class="label label-danger">Reload</span></a>
                     <table class="key-value-table" summary="Example of a key value table.">
                         <caption>Image Info.</caption>
                         <tbody>
@@ -50,8 +53,25 @@
                     </table>
                     <div class="clearfix"></div>
                 </div>
+
                 <div class="clearfix"></div>
             </div>
+
+            <div class="col-md-3 services-left" ng-repeat=" child in child">
+                <div class="view fifth-effect">
+                    <a ui-sref="imageInfo({id:child.suggested.id})">
+                        <img ng-src="{{child.suggested.image}}"/>
+                    </a>
+                    <div class="mask"></div>
+                </div>
+                <div class="s-btm">
+                    <h4>Name:{{child.suggested.name}} </h4>
+                    <h4>Age:{{child.suggested.age}}</h4>
+                    <h4>Confidence:{{child.confidence}}</h4>
+                    <p>{{child.suggested.moreInfo}}</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

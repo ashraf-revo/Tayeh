@@ -41,6 +41,17 @@ class ApiCtrl {
         }
     }
 
+    @JsonView(RevoView.SuggestedAndChildAndItsPerson.class)
+    @RequestMapping(value = "/search", method = RequestMethod.POST)
+    @ResponseBody
+    def SearchImage(@RequestBody Child c) {
+        try {
+            ResponseEntity.ok(childService.search(c))
+        } catch (Exception ignored) {
+            loggerService.Error(log, new ErrorMessage(1, ignored.message))
+        }
+    }
+
     @JsonView(RevoView.ChildAndItsPerson.class)
     @RequestMapping(value = "/searchcriteria", method = RequestMethod.POST)
     @ResponseBody
@@ -52,7 +63,7 @@ class ApiCtrl {
         }
     }
 
-    @RequestMapping(value = "/uplode", method = RequestMethod.POST)
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
     def uplode(@RequestBody Child child) {
         try {
@@ -63,16 +74,6 @@ class ApiCtrl {
         }
     }
 
-    @JsonView(RevoView.SuggestedAndChildAndItsPerson.class)
-    @RequestMapping(value = "/search", method = RequestMethod.POST)
-    @ResponseBody
-    def SearchImage(@RequestBody Child c) {
-        try {
-            ResponseEntity.ok(childService.search(c))
-        } catch (Exception ignored) {
-            loggerService.Error(log, new ErrorMessage(1, ignored.message))
-        }
-    }
 
     @JsonView(RevoView.ChildAndItsPerson.class)
     @RequestMapping(value = "/images", method = RequestMethod.GET)
@@ -86,11 +87,22 @@ class ApiCtrl {
     }
 
     @JsonView(RevoView.ChildAndItsPerson.class)
-    @RequestMapping(value = "/imageinfo/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/imageInfo/{id}", method = RequestMethod.GET)
     @ResponseBody
     def ImageInfo(@PathVariable("id") String id) {
         try {
             ResponseEntity.ok(childService.findOne(id))
+        } catch (Exception ignored) {
+            loggerService.Error(log, new ErrorMessage(1, ignored.message))
+        }
+    }
+
+    @JsonView(RevoView.SuggestedAndChild.class)
+    @RequestMapping(value = "/suggested/{id}")
+    @ResponseBody
+    def Suggested(@PathVariable String id) {
+        try {
+            ResponseEntity.ok(childService.suggested(id))
         } catch (Exception ignored) {
             loggerService.Error(log, new ErrorMessage(1, ignored.message))
         }

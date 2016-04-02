@@ -87,7 +87,7 @@ angular.module('revolovexApp')
 
             $scope.dform.file = $scope.result.substring($scope.result.indexOf(";base64,") + 8);
 
-            $http.post("/api/uplode", $scope.dform)
+            $http.post("/api/upload", $scope.dform)
                 .success(function () {
                     $uibModalInstance.close();
                 });

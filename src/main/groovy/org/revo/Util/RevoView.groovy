@@ -24,8 +24,11 @@ class RevoView {
 
     interface ChildAndItsPerson extends ChildView, PersonView, ChildPerson {
     }
-    interface SuggestedAndChildAndItsPerson extends ChildView, SuggestedView,ChildPerson,PersonView
-    {
+
+    interface SuggestedAndChildAndItsPerson extends ChildView, SuggestedView, ChildPerson, PersonView {
+    }
+
+    interface SuggestedAndChild extends ChildView, SuggestedView {
     }
 
     interface PersonAndItsChild extends ChildView, PersonView, PersonChild {
