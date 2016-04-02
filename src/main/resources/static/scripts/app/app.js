@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp', ['LocalStorageModule',
+angular.module('tayeh', ['LocalStorageModule',
     'ngResource', 'ui.router', 'ngCookies', 'ngCacheBuster','ui.bootstrap', 'base64','dialogs.main','ImageCropper'])
 
     .run(function ($rootScope,  $window, $http, $state, Auth, Principal) {

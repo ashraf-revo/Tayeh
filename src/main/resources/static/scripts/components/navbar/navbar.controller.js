@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .controller('NavbarController', function ($scope, $location, $state, Auth, Principal) {
         Principal.identity().then(function(account) {
             $scope.account = account;

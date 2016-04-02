@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .directive('hasAnyRole', ['Principal', function (Principal) {
         return {
             restrict: 'A',

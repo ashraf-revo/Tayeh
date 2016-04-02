@@ -1,19 +1,19 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .config(function ($stateProvider) {
         $stateProvider
-            .state('image', {
+            .state('profile', {
                 parent: 'account',
-                url: '/image/:id',
+                url: '/profile',
                 data: {
                     roles: ['ROLE_USER'],
-                    pageTitle: 'image'
+                    pageTitle: 'profile'
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/account/image/image.html',
-                        controller: 'ImageController'
+                        templateUrl: 'scripts/app/account/profile/profile.html',
+                        controller: 'ProfileController'
                     }
                 }
             });

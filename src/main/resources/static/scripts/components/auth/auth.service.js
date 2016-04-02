@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .factory('Auth', function Auth($rootScope, $state, $q,  Principal, AuthServerProvider, Account) {
         return {
             login: function (credentials, callback) {

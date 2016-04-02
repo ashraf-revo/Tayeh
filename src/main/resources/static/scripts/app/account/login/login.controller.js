@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .controller('LoginController', function ($rootScope, $scope, $state,Auth) {
         $scope.user = {};
         $scope.errors = {};

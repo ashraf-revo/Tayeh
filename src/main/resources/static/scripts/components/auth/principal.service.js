@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .factory('Principal', function Principal($q, Account) {
         var _identity,_authenticated = false;
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .controller('MainController', function ($scope, $http, dialogs, Principal) {
         Principal.identity().then(function (account) {
             $scope.account = account;

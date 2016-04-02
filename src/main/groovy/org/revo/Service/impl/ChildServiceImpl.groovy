@@ -129,7 +129,7 @@ class ChildServiceImpl implements ChildService {
     @Override
     void uplode(Child child) {
         if (child.file && !child.file.isEmpty()) {
-            child.image = cloudinaryService.uplode(child.file)
+            child.image = cloudinaryService.upload(child.file)
             Child saveChild = save(child)
             def de = skybiometry.detect(child.image, "all")
             if (de.status == status.success) {
@@ -147,7 +147,7 @@ class ChildServiceImpl implements ChildService {
                 } else throw new Exception("i need only one image to continue")
             } else throw new Exception("cant detect image")
 
-        } else throw new Exception("some error in this file please uplode another one ")
+        } else throw new Exception("some error in this file please upload another one ")
 
     }
 

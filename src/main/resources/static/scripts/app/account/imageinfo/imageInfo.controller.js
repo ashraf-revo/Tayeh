@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .controller('ImageInfoController', function ($rootScope, $scope, $state, $http) {
         $http.get('/api/imageInfo/' + $state.params.id)
             .success(function (c) {

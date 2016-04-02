@@ -1,4 +1,4 @@
-package org.revo.cong;
+package org.revo.config;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * Created by revo on 20/10/15.
  */
 @Configuration
-class Skybiometryconfg {
+class Skybiometryconfig {
     @Bean
     login login() {
         return new login();

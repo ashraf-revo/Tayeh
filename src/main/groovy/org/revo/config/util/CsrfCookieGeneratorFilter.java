@@ -1,4 +1,4 @@
-package org.revo.cong.util;
+package org.revo.config.util;
 
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.filter.OncePerRequestFilter;

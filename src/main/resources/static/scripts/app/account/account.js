@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('revolovexApp')
+angular.module('tayeh')
     .config(function ($stateProvider) {
         $stateProvider
             .state('account', {

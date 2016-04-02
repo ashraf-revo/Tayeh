@@ -1,4 +1,4 @@
-package org.revo.cong.util;
+package org.revo.config.util;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AbstractAuthenticationTargetUrlRequestHandler;

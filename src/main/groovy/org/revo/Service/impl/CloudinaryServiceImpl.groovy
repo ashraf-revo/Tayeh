@@ -15,7 +15,7 @@ class CloudinaryServiceImpl implements CloudinaryService{
     Cloudinary cloudinary
 
     @Override
-    String uplode(String file) {
+    String upload(String file) {
         Map map = cloudinary.uploader().uploadLarge(file.decodeBase64(), ObjectUtils.emptyMap());
         map.get("secure_url") as String
     }
