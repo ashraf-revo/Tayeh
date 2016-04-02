@@ -1,0 +1,57 @@
+<div class="services">
+    <div class="container">
+        <div class="gallery-bottom">
+            <div class="gallery-grids" ng-if="c">
+                <div class="col-md-3 gallery-left" style="margin-right: 15%">
+                    <a ui-sref="image({id:c.id})">
+                        <img ng-src="{{c.image}}" class="b-link-stripe b-animate-go  thickbox"></a>
+                </div>
+                <div class="col-md-6 gallery-right">
+                    <table class="key-value-table" summary="Example of a key value table.">
+                        <caption>Image Info.</caption>
+                        <tbody>
+                        <tr>
+                            <th class="width-20">Name:</th>
+                            <td>{{c.name}}</td>
+                        </tr>
+                        <tr>
+                            <th class="width-20">Age:</th>
+                            <td>{{c.age}}</td>
+                        </tr>
+                        <tr>
+                            <th class="width-20">Date:</th>
+                            <td>{{c.createdDate | date:"dd/MM/yyyy 'at' h:mma"}}</td>
+                        </tr>
+                        <tr>
+                            <th class="width-20">Is Founded:</th>
+                            <td>{{c.founded}}</td>
+                        </tr>
+                        <tr>
+                            <th class="width-20">Gender:</th>
+                            <td>{{c.gender}}</td>
+                        </tr>
+                        <tr>
+                            <th class="width-20">Info:</th>
+                            <td>{{c.moreInfo}}</td>
+                        </tr>
+                        <tr>
+                            <th class="width-20">Person Name:</th>
+                            <td>{{c.person.name}}</td>
+                        </tr>
+                        <tr>
+                            <th class="width-20">Person Profile:</th>
+                            <td>
+                                <a ui-sref="profile({id:c.person.id})">
+                                    <img ng-src="{{c.person.image}}">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
