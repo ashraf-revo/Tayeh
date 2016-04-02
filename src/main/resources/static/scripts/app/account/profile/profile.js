@@ -8,7 +8,7 @@ angular.module('tayeh')
                 url: '/profile',
                 data: {
                     roles: ['ROLE_USER'],
-                    pageTitle: 'profile'
+                    pageTitle: 'Profile'
                 },
                 views: {
                     'content@': {

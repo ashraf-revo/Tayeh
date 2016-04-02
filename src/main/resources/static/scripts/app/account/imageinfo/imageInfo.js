@@ -8,7 +8,7 @@ angular.module('tayeh')
                 url: '/imageinfo/:id',
                 data: {
                     roles: [],
-                    pageTitle: 'image'
+                    pageTitle: 'ImageInfo'
                 },
                 views: {
                     'content@': {

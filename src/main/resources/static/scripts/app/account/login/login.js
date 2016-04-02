@@ -8,7 +8,7 @@ angular.module('tayeh')
                 url: '/login',
                 data: {
                     roles: [], 
-                    pageTitle: 'login'
+                    pageTitle: 'Login'
                 },
                 views: {
                     'content@': {
