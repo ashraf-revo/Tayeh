@@ -1,4 +1,15 @@
- 
+.circle {
+	display: block;
+	width: 68px;
+	height: 68px;
+	background-size: cover;
+	background: no-repeat center center;
+	-webkit-border-radius: 99em;
+	-moz-border-radius: 99em;
+	border-radius: 99em;
+	box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
 html, body{
     font-size: 100%;
 	background:	#fff;

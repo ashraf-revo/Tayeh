@@ -13,9 +13,6 @@
                            class="hvr-bounce-to-right">About</a>
                     </li>
                     <li>
-                        <a ui-sref="contact" ng-class="{active: $state.includes('contact')}"
-                           class="hvr-bounce-to-right">Contact</a></li>
-                    <li>
                         <a ui-sref="login" ng-class="{active: $state.includes('login')}" ng-switch-when="false"
                            class="hvr-bounce-to-right">login</a>
                     </li>
@@ -62,17 +59,3 @@
         });
     });
 </script>
-<style>
-    .circle {
-        display: block;
-        width: 68px;
-        height: 68px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        -webkit-border-radius: 99em;
-        -moz-border-radius: 99em;
-        border-radius: 99em;
-        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
-    }
-</style>
